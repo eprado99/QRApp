@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "QRApp",
+    "slug": "QRApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "QRApp needs access to your Camera.",
+        "NSMicrophoneUsageDescription": "QRApp needs access to your Microphone."
+      },
+      "bundleIdentifier": "qr.expo.client"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "qr.expo.client"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow QRApp to access camera."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ab59923d-f993-4211-b0d3-e99ee4b499be"
+      }
+    }
+  }
+}
